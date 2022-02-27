@@ -19,6 +19,7 @@ Log.Logger = new LoggerConfiguration()
 	.ReadFrom.Configuration(configuration)
 	.CreateBootstrapLogger();
 
+var exitCode = 0;
 try
 {
 	Log.Information("Starting console host");
@@ -42,7 +43,7 @@ try
 		.Build();
 
 	var application = host.Services.GetRequiredService<Application>();
-	await application.RunAsync(args);
+	exitCode = await application.RunAsync(args);
 }
 catch (Exception ex)
 {
@@ -51,4 +52,5 @@ catch (Exception ex)
 finally
 {
 	Log.CloseAndFlush();
+	Environment.Exit(exitCode);
 }
