@@ -6,6 +6,9 @@ namespace CryptoComTax.Core.Engines.Voyager
 	{
 		public CryptoTransaction Convert(VoyagerTransaction source)
 		{
+			if (source == null)
+				throw new ArgumentNullException(nameof(source));
+
 			var destination = new CryptoTransaction
 			{
 				Date = source.TransactionDate

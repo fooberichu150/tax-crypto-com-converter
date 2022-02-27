@@ -1,4 +1,5 @@
 ﻿using System;
+using CryptoComTax.Core.Domain;
 using CryptoComTax.Core.Domain.Transactions;
 
 namespace CryptoComTax.Core.Tests.TestFixtures

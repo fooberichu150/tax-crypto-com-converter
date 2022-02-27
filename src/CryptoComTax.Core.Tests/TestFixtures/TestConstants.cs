@@ -13,15 +13,10 @@
 		public const int AbraConvertCount = 25;
 
 		public const string RobinhoodTestFile = $"{TestFilesSourceFolder}/2021-robinhood-crypto.csv";
-		public const int RobinhoodConvertCount = 3;
+		public const int RobinhoodConvertCount = 7;
 
 		public const string UpholdTestFile = $"{TestFilesSourceFolder}/2021-uphold-transactions.csv";
 		public const int UpholdConvertCount = 48;
-	}
-
-	public static class FiatConstants
-	{
-		public const string Usd = "USD";
 	}
 
 	public static class CryptoTokenConstants
