@@ -38,7 +38,6 @@ namespace CryptoComTax.Core.Engines.Voyager
 			}
 
 			destination.TransactionType = TransactionType.Reward;
-			destination.ReceivedCurrency = source.BaseAsset;
 			destination.ReceivedAmount = source.Quantity;
 			destination.ReceivedCurrency = source.BaseAsset;
 			destination.ReceivedNetWorth = source.NetAmount;
