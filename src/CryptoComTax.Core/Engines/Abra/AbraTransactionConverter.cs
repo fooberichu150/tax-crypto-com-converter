@@ -7,27 +7,14 @@ using CryptoComTax.Core.Domain.Transactions;
 
 namespace CryptoComTax.Core.Engines.Abra
 {
-	public class AbraTransactionConverter : ITransactionConverter<VoyagerTransaction>
+	public class AbraTransactionConverter : ITransactionConverter<AbraTransaction>
 	{
 		public AbraTransactionConverter()
 		{
 
 		}
 
-		public CryptoTransaction Convert(VoyagerTransaction source)
-		{
-			throw new NotImplementedException();
-		}
-	}
-
-	public class AbraTransactionImporter : ITransactionImporter
-	{
-		public AbraTransactionImporter()
-		{
-
-		}
-
-		public IEnumerable<CryptoTransaction> ConvertFile(string filePath)
+		public CryptoTransaction Convert(AbraTransaction source)
 		{
 			throw new NotImplementedException();
 		}

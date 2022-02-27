@@ -1,4 +1,7 @@
 ﻿using CryptoComTax.Core.Domain.Transactions;
+using CryptoComTax.Core.Engines.Abra;
+using CryptoComTax.Core.Engines.Robinhood;
+using CryptoComTax.Core.Engines.Uphold;
 using CryptoComTax.Core.Engines.Voyager;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,14 +26,13 @@ namespace CryptoComTax.Core.Engines
 			switch (transactionSource)
 			{
 				case TransactionSource.Abra:
-					break;
+					return _serviceProvider.GetRequiredService<AbraTransactionImporter>();
 				case TransactionSource.Robinhood:
-					break;
+					return _serviceProvider.GetRequiredService<RobinhoodTransactionImporter>();
+				case TransactionSource.Uphold:
+					return _serviceProvider.GetRequiredService<UpholdTransactionImporter>();
 				case TransactionSource.Voyager:
 					return _serviceProvider.GetRequiredService<VoyagerTransactionImporter>();
-					//return new VoyagerTransactionImporter();
-				case TransactionSource.Uphold:
-					break;
 			}
 
 			throw new NotImplementedException();

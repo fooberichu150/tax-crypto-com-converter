@@ -2,8 +2,20 @@
 using Microsoft.Extensions.Logging;
 using Moq;
 
-namespace CryptoComTax.Tests.Extensions
+namespace CryptoComTax.Core.Tests.Extensions
 {
+    public static class ObjectExtensions
+    {
+        public static object GetDefault(Type type)
+        {
+            if (type.IsValueType)
+            {
+                return Activator.CreateInstance(type);
+            }
+            return null;
+        }
+    }
+
     /// <summary>
     /// LoggingExtensions as borrowed (and modified) from https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq
     /// </summary>
