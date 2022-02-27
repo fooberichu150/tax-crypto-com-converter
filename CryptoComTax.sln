@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoComTax.Console", "src\CryptoComTax.Console\CryptoComTax.Console.csproj", "{F469BABF-4FEE-41C5-A524-E414479CF74E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoComTax.Tests", "src\CryptoComTax.Tests\CryptoComTax.Tests.csproj", "{3718DB53-9C00-4C27-92D3-64736FA2B82A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoComTax.Core.Tests", "src\CryptoComTax.Core.Tests\CryptoComTax.Core.Tests.csproj", "{3718DB53-9C00-4C27-92D3-64736FA2B82A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoComTax.Core", "src\CryptoComTax.Core\CryptoComTax.Core.csproj", "{D11C0D13-CB42-4EF5-9D9F-1F95C292B896}"
 EndProject

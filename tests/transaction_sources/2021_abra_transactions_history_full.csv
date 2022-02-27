@@ -1,0 +1,41 @@
+DISCLAIMER: This report does not constitute legal or tax advice.
+Abra makes no guarantees regarding the accuracy of this report and will not offer advice for your specific tax circumstances as laws and regulations change frequently and vary from country to country.
+By using this report you disclaim Abra from any responsibility for the accuracy or adequacy of any positions taken by you in your tax reporting obligations. Please consult a professional tax advisor.
+
+If you have multiple Abra wallets you will need to request reports for each wallet separately. Contact support@abra.com if you need help.
+Transactions with implicit exchange currency conversions are split into multiple rows.
+Your home currency is derived based on your provided phone number.
+
+Please note there may be small rounding errors.
+
+User ID: ABC123
+Name: Joe Shmoe
+Email: joe@shmoe.com
+Home Currency: USD
+
+Transaction date (UTC),Transaction ID,Transaction type,Description,Product,Gross Quantity,Network Fees,Net Quantity,Rate (USD),Net Amount (USD)
+2021-04-29 18:31:24,ABC1231,Inbound Transfer,Bank deposit from Plaid,USD,100,0,100,1 USD = 1 USD,100.00
+2021-04-29 18:31:24,ABC1231,Buy,Asset exchange: buy TUSD,TUSD,100,0,100,1 TUSD = 1 USD,100.00
+2021-05-01 12:40:36,ABC1232,Sell,Asset exchange: sell TUSD,TUSD,50,0,50,1 TUSD = 1 USD,50.00
+2021-05-01 12:40:36,ABC1232,Buy,Asset exchange: buy SC,SC,1229.82,0,1229.82,1 SC = 0.03996745 USD,49.15
+2021-05-01 12:40:56,ABC1233,Sell,Asset exchange: sell TUSD,TUSD,50,0,50,1 TUSD = 1 USD,50.00
+2021-05-01 12:40:56,ABC1233,Buy,Asset exchange: buy TRX,TRX,375.475,0,375.475,1 TRX = 0.13090768 USD,49.15
+2021-05-07 02:42:57,ABC1234,Sell,Asset exchange: sell TRX,TRX,375.475,0,375.475,1 TRX = 0.1570026 USD,58.95
+2021-05-07 02:42:57,ABC1234,Buy,Asset exchange: buy USDT,USDT,57.83300474,0,57.83300474,1 USDT = 1.00426458 USD,58.08
+2021-05-07 16:41:20,ABC1235,Sell,Asset exchange: sell USDT,USDT,57.83300474,0,57.83300474,1 USDT = 0.9998016 USD,57.82
+2021-05-07 16:41:20,ABC1235,Buy,Asset exchange: buy DOGE,DOGE,92.51545768,0,92.51545768,1 DOGE = 0.61560347 USD,56.95
+2021-06-11 00:09:05,ABC1236,Inbound Transfer,Deposit to RVN address,RVN,226.97953619,0,226.97953619,1 RVN = 0.07200028 USD,16.34
+2021-08-05 21:56:32,ABC1237,Sell,Asset exchange: sell RVN,RVN,226.97953619,0,226.97953619,1 RVN = 0.07287099 USD,16.54
+2021-08-05 21:56:32,ABC1237,Buy,Asset exchange: buy TUSD,TUSD,16.24,0,16.24,1 TUSD = 1 USD,16.24
+2021-08-05 23:06:31,ABC1238,Sell,Asset exchange: sell DOGE,DOGE,92.51545768,0,92.51545768,1 DOGE = 0.20056487 USD,18.56
+2021-08-05 23:06:31,ABC1238,Buy,Asset exchange: buy TUSD,TUSD,18.24,0,18.24,1 TUSD = 1 USD,18.24
+2021-08-05 23:07:11,ABC1239,Sell,Asset exchange: sell SC,SC,1229.82,0,1229.82,1 SC = 0.01599597 USD,19.67
+2021-08-05 23:07:11,ABC1239,Buy,Asset exchange: buy TUSD,TUSD,19.3,0,19.3,1 TUSD = 1 USD,19.30
+2021-09-04 23:24:02,ABC1240,Sell,Asset exchange: sell TUSD,TUSD,29,0,29,1 TUSD = 1 USD,29.00
+2021-09-04 23:24:02,ABC1240,Buy,Asset exchange: buy ADA,ADA,10.028356,0,10.028356,1 ADA = 2.83920689 USD,28.47
+2021-09-07 12:29:05,ABC1241,Sell,Asset exchange: sell TUSD,TUSD,24.78,0,24.78,1 TUSD = 1 USD,24.78
+2021-09-07 12:29:05,ABC1241,Buy,Asset exchange: buy ADA,ADA,9.284376,0,9.284376,1 ADA = 2.61883385 USD,24.31
+2021-10-19 03:31:31,ABC1242,Buy,Transfer from ADA to Interest-earning ADA,Interest-earning ADA,19.312732,0,19.312732,1 ADA = 2.14914445 USD,41.51
+2021-10-25 23:27:01,ABC1243,Interest Payment,Interest paid to Interest-earning ADA,Interest-earning ADA,0.007726,0,0.007726,1 ADA = 2.14623242 USD,0.02
+2021-11-26 11:48:44,ABC1244,Reward,5.0% bonus yield on all funds,CPRX,0.01730104,0,0.01730104,1 CPRX = 0.27646911 USD,0.00
+2021-11-26 16:26:46,ABC1245,Reward,Historical Rewards,CPRX,7.16008184,0,7.16008184,1 CPRX = 0.27953268 USD,2.00

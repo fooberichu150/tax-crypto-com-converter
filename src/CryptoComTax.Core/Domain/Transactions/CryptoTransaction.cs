@@ -12,7 +12,7 @@
 		public decimal ReceivedAmount { get; set; }
 		public decimal? ReceivedNetWorth { get; set; }
 		public string SentCurrency { get; set; } = string.Empty;
-		public decimal SentAmount { get; set; }
+		public decimal? SentAmount { get; set; }
 		public decimal? SentNetWorth { get; set; }
 		public string? FeeCurrency { get; set; }
 		public decimal? FeeAmount { get; set; }

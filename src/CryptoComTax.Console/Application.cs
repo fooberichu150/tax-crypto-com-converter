@@ -18,7 +18,7 @@ public class Application
 		_transactionExporter = transactionExporter;
 	}
 
-	public async Task RunAsync(string[] args)
+	public async Task<int> RunAsync(string[] args)
 	{
 		var exitCode = 0;
 
@@ -63,9 +63,6 @@ public class Application
 			exitCode = -2;
 		});
 
-		// 2021_abra_transactions_history.csv
-		// 2021-robinhood-crypto.csv
-		// 2021-uphold-2011583030-transactions.csv
-		// 2021-voyager-transactions_2021-01-01_2022-01-01.csv
+		return await Task.FromResult(exitCode);
 	}
 }
