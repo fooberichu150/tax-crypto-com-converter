@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Moq;
 
-namespace CryptoComTax.Tests.Extensions
+namespace CryptoComTax.Core.Tests.Extensions
 {
     /// <summary>
     /// LoggingExtensions as borrowed (and modified) from https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq

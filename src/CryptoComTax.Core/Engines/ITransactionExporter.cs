@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using CryptoComTax.Core.Domain.Transactions;
+using CryptoComTax.Core.Engines.TypeConverters;
 using CsvHelper;
 using CsvHelper.Configuration;
 

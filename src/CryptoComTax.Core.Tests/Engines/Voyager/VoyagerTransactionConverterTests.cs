@@ -1,11 +1,11 @@
 using System;
 using CryptoComTax.Core.Domain.Transactions;
 using CryptoComTax.Core.Engines.Voyager;
-using CryptoComTax.Tests.TestFixtures;
 using FluentAssertions;
 using Xunit;
+using CryptoComTax.Core.Tests.TestFixtures;
 
-namespace CryptoComTax.Tests
+namespace CryptoComTax.Core.Tests.Engines.Voyager
 {
 	public class VoyagerTransactionConverterTests
 	{

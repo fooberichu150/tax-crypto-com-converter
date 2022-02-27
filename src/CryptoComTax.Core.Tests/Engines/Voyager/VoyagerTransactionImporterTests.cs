@@ -3,13 +3,13 @@ using System.Linq;
 using CryptoComTax.Core.Domain.Transactions;
 using CryptoComTax.Core.Engines;
 using CryptoComTax.Core.Engines.Voyager;
-using CryptoComTax.Tests.TestFixtures;
+using CryptoComTax.Core.Tests.TestFixtures;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace CryptoComTax.Tests
+namespace CryptoComTax.Core.Tests.Engines.Voyager
 {
 	public class VoyagerTransactionImporterTests
 	{

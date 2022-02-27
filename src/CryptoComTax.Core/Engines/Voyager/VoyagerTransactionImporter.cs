@@ -1,37 +1,25 @@
-﻿using System.Globalization;
-using CryptoComTax.Core.Domain.Transactions;
-using CsvHelper;
+﻿using CryptoComTax.Core.Domain.Transactions;
+using CryptoComTax.Core.Engines.TypeConverters;
 using CsvHelper.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace CryptoComTax.Core.Engines.Voyager
 {
-	public class VoyagerTransactionImporter : ITransactionImporter
+	public class VoyagerTransactionImporter : TransactionImporterBase<VoyagerTransaction>
 	{
 		private readonly ITransactionConverter<VoyagerTransaction> _transactionConverter;
-		private readonly ILogger<VoyagerTransactionImporter> _logger;
 
-		public VoyagerTransactionImporter(ILogger<VoyagerTransactionImporter> logger, 
+		protected override Type ClassMapType => typeof(VoyagerTransactionCsvMap);
+
+		public VoyagerTransactionImporter(ILogger<VoyagerTransactionImporter> logger,
 			ITransactionConverter<VoyagerTransaction> transactionConverter)
+			: base(logger, transactionConverter)
 		{
-			_logger = logger;
 			_transactionConverter = transactionConverter;
 		}
 
-		public IEnumerable<CryptoTransaction> ConvertFile(string filePath)
+		protected override IEnumerable<CryptoTransaction> ConvertRecords(IEnumerable<VoyagerTransaction> records)
 		{
-			var records = default(List<VoyagerTransaction>);
-
-			using (var reader = new StreamReader(filePath))
-			using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-			{
-				csv.Context.RegisterClassMap<VoyagerTransactionCsvMap>();
-
-				records = csv
-					.GetRecords<VoyagerTransaction>()
-					.ToList();
-			}
-
 			var convertedRecords = records
 				.Where(record => record.TransactionType != VoyagerTransactionType.Bank)
 				.Select(record => _transactionConverter.Convert(record))

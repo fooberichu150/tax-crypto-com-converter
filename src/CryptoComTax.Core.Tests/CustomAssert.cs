@@ -1,4 +1,4 @@
-namespace CryptoComTax.Tests
+namespace CryptoComTax.Core.Tests
 {
 	public static class CustomAssert
 	{

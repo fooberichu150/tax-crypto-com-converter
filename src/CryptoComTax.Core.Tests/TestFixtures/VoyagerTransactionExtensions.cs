@@ -1,7 +1,7 @@
 ﻿using System;
 using CryptoComTax.Core.Domain.Transactions;
 
-namespace CryptoComTax.Tests.TestFixtures
+namespace CryptoComTax.Core.Tests.TestFixtures
 {
 	public static class VoyagerTransactionExtensions
 	{
