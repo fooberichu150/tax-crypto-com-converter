@@ -9,7 +9,7 @@
 		public DateTime Date { get; set; }
 		public TransactionType TransactionType { get; set; }
 		public string ReceivedCurrency { get; set; } = string.Empty;
-		public decimal ReceivedAmount { get; set; }
+		public decimal? ReceivedAmount { get; set; }
 		public decimal? ReceivedNetWorth { get; set; }
 		public string SentCurrency { get; set; } = string.Empty;
 		public decimal? SentAmount { get; set; }

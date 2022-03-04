@@ -45,6 +45,7 @@ public class Application
 			var importer = _transactionImporterFactory.GetTransactionImporter(args.Exchange);
 			var records = importer
 				.ConvertFile(args.InputFile)
+				.Where(record => record.IsValid)
 				.ToList();
 
 			var outputFileName = !string.IsNullOrWhiteSpace(args.OutputFile)
