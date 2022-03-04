@@ -36,7 +36,8 @@ namespace CryptoComTax.Core.Engines
 			var convertedRecords = ConvertRecords(records)
 				.ToArray();
 
-			_logger.LogDebug("Converted {count} records", convertedRecords.Length);
+			var invalidRecordCount = convertedRecords.Count(x => !x?.IsValid ?? false);
+			_logger.LogDebug("Converted {count} records; invalid count: {invalidRecordCount}", convertedRecords.Length, invalidRecordCount);
 
 			return convertedRecords;
 		}

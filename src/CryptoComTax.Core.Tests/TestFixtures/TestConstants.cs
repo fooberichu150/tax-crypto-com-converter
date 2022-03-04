@@ -16,7 +16,7 @@
 		public const int RobinhoodConvertCount = 7;
 
 		public const string UpholdTestFile = $"{TestFilesSourceFolder}/2021-uphold-transactions.csv";
-		public const int UpholdConvertCount = 48;
+		public const int UpholdConvertCount = 6;
 	}
 
 	public static class CryptoTokenConstants
