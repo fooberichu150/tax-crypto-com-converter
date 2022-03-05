@@ -1,5 +1,5 @@
 # tax.crypto.com Transaction Converter
-Basic application to take various exchange CSV transaction files and convert to the generic CSV format for tax.crypto.com
+Basic application to take various exchange CSV transaction files and convert to the [generic CSV format](https://help.crypto.com/en/articles/5019792-data-import) for tax.crypto.com
 
 ## Build and Test
 
@@ -27,7 +27,7 @@ CryptoComTax.Console.exe -e robinhood -i ".\2021-robinhood-crypto.csv" -o "."
 
 ### Supported Exchanges
 
-- Abra (planned)
+- Abra (supports interest payments, rewards, swaps, and deposits)
 - Robinhood (basic support; doesn't support transfers)
-- Uphold (planned)
+- Uphold (basic support; `out` transactions only supports `gift` (aka Brave donations), `in` only supports `reward` aka Brave rewards, `transfer` supports `buy` and `sell`)
 - Voyager (currently doesn't support crypto transfer, I didn't have any examples to work with)

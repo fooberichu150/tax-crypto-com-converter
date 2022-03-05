@@ -17,7 +17,7 @@ namespace CryptoComTax.Core.Engines.Voyager
 			switch (source.TransactionType)
 			{
 				case VoyagerTransactionType.Bank:
-					return new CryptoTransaction { IsValid = false };
+					return CryptoTransaction.Invalid();
 				case VoyagerTransactionType.Reward:
 					{
 						ConvertReward(destination, source);

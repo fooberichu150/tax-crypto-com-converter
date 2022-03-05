@@ -26,7 +26,7 @@ namespace CryptoComTax.Core.Engines.Uphold
 		{
 			// bank withdrawal
 			if (string.Compare(source.Destination, "bank", StringComparison.OrdinalIgnoreCase) == 0) // .OriginCurrency == FiatConstants.Usd)
-				return new CryptoTransaction { IsValid = false };
+				return CryptoTransaction.Invalid();
 
 			// may not always be the case, but with my transactions, they are BAT donations
 			return new CryptoTransaction
@@ -55,7 +55,7 @@ namespace CryptoComTax.Core.Engines.Uphold
 			if (source.DestinationCurrency == source.OriginCurrency)
 			{
 				//destination.TransactionType = TransactionType.Transfer;
-				return new CryptoTransaction { IsValid = false };
+				return CryptoTransaction.Invalid();
 			}
 
 			var destination = new CryptoTransaction

@@ -19,7 +19,7 @@ namespace CryptoComTax.Core.Engines.Robinhood
 				return ConvertSell(source);
 			}
 
-			return new CryptoTransaction { IsValid = false };
+			return CryptoTransaction.Invalid();
 		}
 
 		private CryptoTransaction ConvertBuy(RobinhoodTransaction source)
@@ -29,7 +29,7 @@ namespace CryptoComTax.Core.Engines.Robinhood
 				: 0m;
 
 			if (calculatedQuantity == 0m)
-				return new CryptoTransaction { IsValid = false };
+				return CryptoTransaction.Invalid();
 
 			var destination = new CryptoTransaction
 			{
@@ -50,11 +50,11 @@ namespace CryptoComTax.Core.Engines.Robinhood
 				? source.CostBasisUsd / source.AmountSold
 				: 0m;
 
-			if (calculatedQuantity == 0m 
+			if (calculatedQuantity == 0m
 				|| !source.SoldDate.HasValue
 				|| !source.Proceeds.HasValue)
 			{
-				return new CryptoTransaction { IsValid = false };
+				return CryptoTransaction.Invalid();
 			}
 
 			var destination = new CryptoTransaction

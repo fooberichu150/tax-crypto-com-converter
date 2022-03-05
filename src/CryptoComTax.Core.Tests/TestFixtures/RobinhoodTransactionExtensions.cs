@@ -5,6 +5,11 @@ namespace CryptoComTax.Core.Tests.TestFixtures
 {
 	public static class RobinhoodTransactionExtensions
 	{
+		/// <summary>
+		/// Default transaction type: BUY 25 DOGE for $10
+		/// </summary>
+		/// <param name="transaction"></param>
+		/// <returns></returns>
 		public static RobinhoodTransaction Default(this RobinhoodTransaction transaction)
 		{
 			return transaction

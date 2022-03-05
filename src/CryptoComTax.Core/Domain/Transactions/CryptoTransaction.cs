@@ -17,5 +17,10 @@
 		public string? FeeCurrency { get; set; }
 		public decimal? FeeAmount { get; set; }
 		public decimal? FeeNetWorth { get; set; }
+
+		public static CryptoTransaction Invalid()
+		{
+			return new CryptoTransaction { IsValid = false };
+		}
 	}
 }
