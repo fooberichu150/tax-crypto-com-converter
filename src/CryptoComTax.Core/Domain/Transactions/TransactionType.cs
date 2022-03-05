@@ -11,6 +11,7 @@
 		Airdrop,
 		Payment,
 		Reward,
-		Rebate
+		Rebate,
+		Swap
 	}
 }

@@ -10,7 +10,7 @@
 
 		public const string AbraTestFileFull = $"{TestFilesSourceFolder}/2021_abra_transactions_history_full.csv";
 		public const string AbraTestFile = $"{TestFilesSourceFolder}/2021_abra_transactions_history_no_disclaimer.csv";
-		public const int AbraConvertCount = 25;
+		public const int AbraConvertCount = 15;
 
 		public const string RobinhoodTestFile = $"{TestFilesSourceFolder}/2021-robinhood-crypto.csv";
 		public const int RobinhoodConvertCount = 7;
@@ -21,8 +21,10 @@
 
 	public static class CryptoTokenConstants
 	{
+		public const string Ada = "ADA";
 		public const string DogeCoin = "DOGE";
 		public const string Ethereum = "ETH";
 		public const string Vechain = "VET";
+		public const string TrueUsd = "TUSD";
 	}
 }
